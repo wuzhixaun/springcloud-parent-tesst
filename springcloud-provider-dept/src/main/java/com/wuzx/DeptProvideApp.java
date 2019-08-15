@@ -2,6 +2,7 @@ package com.wuzx;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.cloud.netflix.eureka.EnableEurekaClient;
 
 /**
  * @program: springcloud-parent->DeptProvideApp
@@ -11,6 +12,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
  * @version: 1.0
  **/
 @SpringBootApplication
+@EnableEurekaClient //本服务启动后自动注册进Eureka服务中
 public class DeptProvideApp {
     public static void main(String[] args) {
         SpringApplication.run(DeptProvideApp.class,args);
