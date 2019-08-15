@@ -26,4 +26,5 @@ eureka:
     service-url:
       defaultZone: http://localhost:7001/eureka
   instance:
-    instance-id: springcloud-dept-8001
+    instance-id: springcloud-dept-8001 #自定义服务名称信息
+    prefer-ip-address: true   #访问路径可以显示IP地址
