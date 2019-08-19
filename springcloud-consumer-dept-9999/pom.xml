@@ -9,7 +9,7 @@
     </parent>
     <modelVersion>4.0.0</modelVersion>
 
-    <artifactId>springcloud-consumer-dept</artifactId>
+    <artifactId>springcloud-consumer-dept-9999</artifactId>
     <description>部门微服务消费者</description>
 
 
