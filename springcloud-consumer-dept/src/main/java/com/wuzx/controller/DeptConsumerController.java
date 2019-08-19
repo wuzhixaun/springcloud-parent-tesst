@@ -19,7 +19,8 @@ import java.util.List;
  **/
 @RestController
 public class DeptConsumerController {
-    private static final String REST_PREFIX = "http://localhost:8001";
+    //private static final String REST_PREFIX = "http://localhost:8001";
+    private static final String REST_PREFIX = "http://SPRINGCLOUD-DEPT";//切记这里不要带端口号
     @Autowired
     private RestTemplate restTemplate;//提供福哦中边界访问http服务方法
 
