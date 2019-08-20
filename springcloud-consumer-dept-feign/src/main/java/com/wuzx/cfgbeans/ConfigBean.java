@@ -1,5 +1,7 @@
 package com.wuzx.cfgbeans;
 
+import com.netflix.loadbalancer.IRule;
+import com.netflix.loadbalancer.RoundRobinRule;
 import org.springframework.cloud.client.loadbalancer.LoadBalanced;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
@@ -21,5 +23,13 @@ public class ConfigBean {//boot - spring application.xml
         return new RestTemplate();
     }
 
+    /**
+     * 显示声明就可以替换负载均衡算法
+     * @return
+     */
+    @Bean
+    public IRule myRule() {
+        return new RoundRobinRule();//达到的目的，用我们重新选择的随机算法替换默认的轮询算法
+    }
 }
 

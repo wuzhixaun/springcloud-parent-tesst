@@ -21,6 +21,7 @@ spring:
       max-total: 5                                                #最大连接数
       max-wait-millis: 200                                        #等待连接获取的最大超时时间
 
+
 eureka:
   client: #客户端注册进Eureka服务列表中
     service-url:
@@ -28,6 +29,8 @@ eureka:
   instance:
     instance-id: springcloud-dept-8001 #自定义服务名称信息
     prefer-ip-address: true   #访问路径可以显示IP地址
+
+
 
 info:
   app.name: springcloud
