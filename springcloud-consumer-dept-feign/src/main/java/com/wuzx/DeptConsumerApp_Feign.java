@@ -3,8 +3,8 @@ package com.wuzx;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.cloud.netflix.eureka.EnableEurekaClient;
-import org.springframework.cloud.netflix.ribbon.RibbonClient;
-import userdefinerule.MySelfRule;
+import org.springframework.cloud.netflix.feign.EnableFeignClients;
+import org.springframework.context.annotation.ComponentScan;
 
 /**
  * @program: springcloud-parent->DeptConsumerApp
@@ -15,11 +15,9 @@ import userdefinerule.MySelfRule;
  **/
 @SpringBootApplication
 @EnableEurekaClient
-//在启动该微服务的时候就能去加载我们自定义的Ribbon配置类，从而使配置生效
-//形如 @RibbonClient(name="SPRINGCLOUD-DEPT",)
-@RibbonClient(name="SPRINGCLOUD-DEPT",configuration = {MySelfRule.class})
-public class DeptConsumerApp_9001 {
+@EnableFeignClients(basePackages = {"com.wuzx"})
+public class DeptConsumerApp_Feign {
     public static void main(String[] args) {
-        SpringApplication.run(DeptConsumerApp_9001.class, args);
+        SpringApplication.run(DeptConsumerApp_Feign.class, args);
     }
 }
