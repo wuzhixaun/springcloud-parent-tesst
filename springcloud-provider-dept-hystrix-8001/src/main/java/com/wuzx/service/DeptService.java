@@ -12,7 +12,7 @@ import java.util.List;
  * @version: 1.0
  **/
 
-public interface DeptService {
+public interface   DeptService {
     public boolean addDept(Dept dept);
 
     public Dept findById(Long id);

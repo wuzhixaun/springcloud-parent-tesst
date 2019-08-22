@@ -1,0 +1,28 @@
+server:
+  port: 9527
+
+spring:
+  application:
+    name: springcloud-zuul-gateway
+
+eureka:
+  client:
+    service-url:
+      defaultZone: http://eureka7001.com:7001/eureka/,http://eureka7002.com:7002/eureka/,http://eureka7003.com:7003/eureka/
+  instance:
+    instance-id: gatway-9527.com
+    prefer-ip-address: true
+
+
+info:
+  app.name: www.wuzx.fun
+  company.name: www.wuzx.fun:8080
+  build.artifactId: $project.artifactId$
+  build.version: $project.version$
+zuul:
+  routes:
+    mydept.serviceId: springcloud-dept #进行服务印射key
+    mydept.path: /mydept/** #value
+  #ignored-services: springcloud-dept # 路由不可以通过这个服务名称访问
+  prefix: /wuzx   #加入统一的公共前缀
+  ignored-services: "*"

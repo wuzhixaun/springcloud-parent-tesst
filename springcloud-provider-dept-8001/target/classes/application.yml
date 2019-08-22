@@ -8,7 +8,7 @@ mybatis:
 
 spring:
   application:
-    name: springcloud-dept                                        #服务名称（对外暴露的微服务名字）
+      name: springcloud-dept                                        #服务名称（对外暴露的微服务名字）
   datasource:
     type: com.alibaba.druid.pool.DruidDataSource                  #数据源的操作类型
     driver-class-name: org.gjt.mm.mysql.Driver                    #mysql驱动包

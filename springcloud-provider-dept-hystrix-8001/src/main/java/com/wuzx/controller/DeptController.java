@@ -31,7 +31,7 @@ public class DeptController {
     /**
      * 一旦调用服务失败并跑出异常信息后,会自动调用@HystrixCommand标注好的fallbackMethod调用类中的指定反方
      */
-//    @HystrixCommand(fallbackMethod = "hystrix_get")
+    @HystrixCommand(fallbackMethod = "hystrix_get")
     public Dept get(@PathVariable("id") Long id) {
         Dept dept = service.findById(id);
         if (dept == null) {
